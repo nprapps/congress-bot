@@ -6,3 +6,4 @@ share/
 .Python
 pip-*
 .DS_Store
+notebooks/.ipynb_checkpoints/
