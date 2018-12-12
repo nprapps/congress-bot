@@ -5,3 +5,4 @@ include/
 share/
 .Python
 pip-*
+.DS_Store
