@@ -1,0 +1,7 @@
+lib/
+bin/
+etc/
+include/
+share/
+.Python
+pip-*
