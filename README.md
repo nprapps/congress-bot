@@ -2,13 +2,13 @@
 
 Contributors: Sean McMinn, Frankie Paris, Sara Wise, Maite Fernandez and Sean Mussenden
 
-Developed at [Hacks/Hackers DC](https://www.meetup.com/Hacks-Hackers-DC/) and [NPR Serendipity Days](https://www.npr.org/sections/inside/2011/10/14/141312774/happy-accidents-the-joy-of-serendipity-days).
+Developed at [NPR Serendipity Days](https://www.npr.org/sections/inside/2011/10/14/141312774/happy-accidents-the-joy-of-serendipity-days) and [Hacks/Hackers DC](https://www.meetup.com/Hacks-Hackers-DC/).
 
 -----------
 
 This is a Twitter bot to track activity by members of Congress from a specific state.
 
-The bot is currently prototyped on California (1: Because Sean is from that golden state, and 2: Because if this works California's 55-member delegation, it should be fine with, say, West Virginia's four-person delegation). 
+The bot is currently prototyped on California (1): because Sean is from that golden state, and (2): because if this works California's 55-member delegation, it should be fine with, say, West Virginia's four-person delegation. 
 
 The Python scripts are set up to regularly ping [ProPublica's Congress API](https://projects.propublica.org/api-docs/congress-api/). They check for new data, then compose tweets based on the the information returned.
 
