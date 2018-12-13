@@ -32,3 +32,4 @@ This uses the [Tweepy](http://www.tweepy.org/) Python library to post tweets.
 
 
 
+**Note: Twitter has revoked `write` access from our application, presumably because they hate freedom, democracy and apple pie. Updates to come ...**
