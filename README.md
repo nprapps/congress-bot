@@ -2,7 +2,7 @@
 
 [@calif_leg_bot](https://twitter.com/calif_leg_bot)
 
-Contributors: Sean McMinn, Frankie Paris, Sara Wise, Maite Fernandez and Sean Mussenden
+Contributors: [Sean McMinn](https://twitter.com/shmcminn), [Francesca Paris](https://twitter.com/fparises), [Sara Wise](https://twitter.com/sara_wise), [Maite Fernandez](https://twitter.com/maits) and [Sean Mussenden](smussenden)
 
 Developed at [NPR Serendipity Days](https://www.npr.org/sections/inside/2011/10/14/141312774/happy-accidents-the-joy-of-serendipity-days) and [Hacks/Hackers DC](https://www.meetup.com/Hacks-Hackers-DC/).
 
