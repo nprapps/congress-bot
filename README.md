@@ -22,13 +22,13 @@ This uses the [Tweepy](http://www.tweepy.org/) Python library to post tweets.
 - Tweet votes by senators and House members
 - Tweet statements by senators and House members
 - Tweet bills introduced by senators and House members
+- Tweet when a  bill passes that was introduced by a senator or House member from a specific state
 
 ### Future (aspirational) functionality:
 
 - Tweet cosponsorships by senators and House members
 - Tweet TV/radio appearances by senators and House members
 - Tweet amendments offered by senators and House members
-- Tweet when a  bill passes that was introduced by a senator or House member from a specific state
 
 
 **Note: Twitter has revoked `write` access from our application, presumably because they hate freedom. Updates to come ...**
