@@ -31,5 +31,5 @@ This uses the [Tweepy](http://www.tweepy.org/) Python library to post tweets.
 - Tweet amendments offered by senators and House members
 
 
-**Note: Twitter has revoked `write` access from our application, presumably because they hate freedom. Updates to come ...**
+**Note: Twitter has revoked `write` access from our application, presumably because they hate freedom, democracy and apple pie. Updates to come ...**
 
