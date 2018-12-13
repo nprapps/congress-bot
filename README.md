@@ -8,7 +8,7 @@ Developed at [NPR Serendipity Days](https://www.npr.org/sections/inside/2011/10/
 
 This is a Twitter bot to track activity by members of Congress from a specific state.
 
-The bot is currently prototyped on California (1): because Sean is from that golden state, and (2): because if this works California's 55-member delegation, it should be fine with, say, West Virginia's four-person delegation. 
+The bot is currently prototyped on California (1): because Sean is from that golden state, and (2): because if this works California's 55-member delegation, it should be fine with, say, West Virginia's five-person delegation. 
 
 The Python scripts are set up to regularly ping [ProPublica's Congress API](https://projects.propublica.org/api-docs/congress-api/). They check for new data, then compose tweets based on the the information returned.
 
