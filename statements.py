@@ -1,6 +1,6 @@
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 import time
 import fnmatch
@@ -17,7 +17,7 @@ headers = {
 
 member_list = []
 
-with open('/home/fparis/member_data.json', 'r') as ofile:
+with open('data/member_data.json', 'r') as ofile:
     member_list = json.loads(ofile.read())
 ofile.close()
 
@@ -33,8 +33,8 @@ for member in member_list:
 # ### pull all statements for these members from today
 # loop through all pages for today
 
-#date = str(datetime.today().strftime('%Y-%m-%d'))
-date = "2018-10-5"
+date = str(datetime.today().strftime('%Y-%m-%d'))
+# date = "2018-10-5"
 
 all_recent_member_statements = []
 
@@ -64,8 +64,8 @@ prev_statements = []
 
 # check if a file exists for today
 
-if os.path.isfile('/home/fparis/' + date + '_statements.json'):
-    with open('/home/fparis/' + date + '_statements.json', 'r') as ofile:
+if os.path.isfile('data/' + date + '_statements.json'):
+    with open('data/' + date + '_statements.json', 'r') as ofile:
         prev_statements = json.loads(ofile.read())
     ofile.close()
 
@@ -92,9 +92,9 @@ for statement in new_statements:
         full_name = member_dict["role"][0:3] + '. ' + member_dict["name"] + ' (' + member_dict["party"] + ')'
 
     if statement["title"] == None:
-        t_text = t_text + full_name + ' made a statement. '
+        t_text = t_text + full_name + ' made a statement: '
     else:
-        t_text = t_text + full_name + ' made a statement: "' + statement["title"] + '." '
+        t_text = t_text + full_name + ' made a statement: "' + statement["title"] + '" '
 
     if len(t_text) > allowed_text_length:
         t_text = t_text[0:allowed_text_length] + '... '
@@ -110,11 +110,9 @@ auth.set_access_token(os.environ["T_ACCESS_TOKEN"],os.environ["T_ACCESS_TOKEN_SE
 api = tweepy.API(auth)
 
 for statement in new_statements:
-    print(statement["t_text"])
-    print()
-    # api.update_status(status=statement["t_text"])
+    api.update_status(status=statement["t_text"])
+    time.sleep(60)
 
-print(len(new_statements))
 
 ### log the statements tweeted
 
@@ -122,17 +120,21 @@ for statement in new_statements:
     statement_id = statement["date"] + statement["member_id"] + statement["title"]
     prev_statements.append(statement_id)
 
-with open('/home/fparis/' + date + '_statements.json', 'w') as ofile:
+with open('data/' + date + '_statements.json', 'w') as ofile:
     ofile.write(json.dumps(prev_statements))
 ofile.close()
 
 ### delete old saved files
 
-now = time.time()
-path = '/home/fparis/'
+path = 'data/'
 
 for file in os.listdir('.'):
     if fnmatch.fnmatch(file, '*' + '_statements.json'):
-        if os.stat(file).st_mtime < now - 30 * 86400:
-         print(file)
-         os.remove(os.path.join(path,file))
+
+        if datetime.strptime(file.split('_statements')[0], "%Y-%m-%d") < (date.today() - timedelta(30)):
+            print(file)
+            os.remove(os.path.join(path,file))
+
+
+
+print("update on the server")

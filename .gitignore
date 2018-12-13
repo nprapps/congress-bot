@@ -7,3 +7,6 @@ share/
 pip-*
 .DS_Store
 notebooks/.ipynb_checkpoints/
+env_variables.sh
+notebooks/
+ubuntu*
